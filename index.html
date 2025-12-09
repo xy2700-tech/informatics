@@ -121,25 +121,24 @@
 </head>
 <body>
     <header>
-        <h1>NYC Public Arts & Culture Atlas</h1>
+        <h1>NYC Non-profit Arts & Culture Atlas</h1>
         <p>Mapping access to non-profit arts and cultural organizations across New York City boroughs.</p>
-        <p>Xinyu (Kelly) Yan | Urban Data and Informatics, Fall 2025 | Columbia GSAPP </p>
     </header>
 
     <section>
         <h2>About</h2>
         <p>
-            This projects uses NYC Department of Cultural Affairs data of non-profit arts and culture organizations in New York City. It maps over 1,500 non-profit arts and cultural organizations throughout New York City's five boroughs. From community theaters to major museums, each organization plays a vital role in the city's cultural ecosystem. By visualizing their locations and concentrations, this atlas reveals patterns in cultural density and highlights disparities in arts access across different neighborhoods.
+            New York City is known internationally for its artistic and cultural vibrancy, as residents and tourists alike frequent venues from city-owned institutions to private galleries. 
+            This project specifically focuses on the neighborhood level arts and culture ecosystem, 
+            highlighting the spatial distribution of non-profit arts and culture organizations. 
+            Data is pulled from the NYC Department of Cultural Affairs directory of cultural organizations, organized by discipline, and geocoded for visual clarity. 
+            A webscraper appended website links to the organization dataframe, which is then merged with neighborhood tabulation areas.
         </p>
 
         <div class="stats">
             <div class="stat">
                 <span class="stat-number">1,527</span>
                 <span>Organizations</span>
-            </div>
-            <div class="stat">
-                <span class="stat-number">5</span>
-                <span>Boroughs</span>
             </div>
             <div class="stat">
                 <span class="stat-number">195</span>
@@ -166,7 +165,8 @@
     <section>
         <h2>Directory</h2>
         <p>
-            See all the organizations mapped. Click on icon for details.
+            Zoom in and scroll through a directory of all arts and culture non-profits in New York City. 
+            Curious what's in your neighborhood? Click on icons for more details on address and contact information.
         </p>
 
         <div class="map-container">
@@ -177,7 +177,7 @@
     <section>
         <h2>Analysis</h2>
         <p>
-            Drag around the map to see areas with high counts of arts organizations. Each extrusion is color coded to show predominant discipline type.
+            Drag around the map to compare arts and culture density, hover over the extrusions to view neighborhood name and count.
         </p>
 
         <div class="map-container">
@@ -190,14 +190,12 @@
             <li><strong>Manhattan Concentration:</strong> 45% of all cultural organizations are located in Manhattan</li>
             <li><strong>Gallery Districts:</strong> Chelsea and Williamsburg show the highest density of visual arts organizations</li>
             <li><strong>Theater Hub:</strong> Over 200 performance venues concentrate in Midtown and Lower Manhattan</li>
-            <li><strong>Access Gaps:</strong> Manhattan averages 12 organizations per neighborhood vs. 3-5 in outer boroughs</li>
-            <li><strong>Cultural Deserts:</strong> Several neighborhoods in outer Queens and Staten Island have zero organizations</li>
         </ul>
     </section>
     
       <section>
         <p>
-            Manhattan alone brings up the average count.
+            A huge access gap exists as Manhattan averages 12 organizations per neighborhood versus 3-5 in outer boroughs.
         </p>
 
         <div class="map-container">
@@ -208,7 +206,7 @@
 
     <section>
         <p>
-            Hover over each neighborhood for organization count.
+            A closer look at each borough. Hover over neighborhood areas for details.
         </p>
 
         <div class="cluster-grid">
@@ -242,8 +240,10 @@
     <footer>
         <p><strong>NYC Cultural Organizations Atlas</strong></p>
         <p>Data source: NYC Department of Cultural Affairs</p>
+        <p>Xinyu (Kelly) Yan | Urban Data and Informatics, Fall 2025 | Columbia GSAPP</p>
         <p><a href="https://github.com/yourusername/nyc-arts-atlas">View on GitHub</a></p>
     </footer>
 </body>
 
 </html>
+
