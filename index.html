@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NYC Arts and Cultural Organizations Atlas</title>
+    <style>
+        body {
+            font-family: Georgia, serif;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            margin-top: 60px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .stat {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ddd;
+        }
+
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            display: block;
+        }
+
+        .map-container {
+            margin: 40px 0;
+        }
+
+        iframe {
+            width: 100%;
+            height: 700px;
+            border: 1px solid #ddd;
+        }
+
+        .insights {
+            margin: 40px 0;
+        }
+
+        .insights ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .insights li {
+            margin: 15px 0;
+            padding: 15px;
+            border-left: 4px solid #333;
+            background: #f9f9f9;
+        }
+
+        .cluster-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 40px;
+            margin: 40px 0;
+        }
+
+        .cluster-item h3 {
+            margin-bottom: 10px;
+        }
+
+        .cluster-item iframe {
+            height: 450px;
+        }
+
+        footer {
+            margin-top: 80px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            text-align: center;
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            iframe {
+                height: 500px;
+            }
+
+            .cluster-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>NYC Public Arts & Culture Atlas</h1>
+        <p>Mapping access to non-profit arts and cultural organizations across New York City boroughs.</p>
+        <p>Xinyu (Kelly) Yan | Urban Data and Informatics, Fall 2025 | Columbia GSAPP </p>
+    </header>
+
+    <section>
+        <h2>About</h2>
+        <p>
+            This projects uses NYC Department of Cultural Affairs data of non-profit arts and culture organizations in New York City. It maps over 1,500 non-profit arts and cultural organizations throughout New York City's five boroughs. From community theaters to major museums, each organization plays a vital role in the city's cultural ecosystem. By visualizing their locations and concentrations, this atlas reveals patterns in cultural density and highlights disparities in arts access across different neighborhoods.
+        </p>
+
+        <div class="stats">
+            <div class="stat">
+                <span class="stat-number">1,527</span>
+                <span>Organizations</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number">5</span>
+                <span>Boroughs</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number">195</span>
+                <span>Neighborhoods</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number">6</span>
+                <span>Disciplines</span>
+            </div>
+        </div>
+    </section>
+    
+        
+    <section>
+        <p>
+            Explore how different types of cultural organizations cluster across the city.
+        </p>
+
+        <div class="map-container">
+            <iframe src="cluster.html"></iframe>
+        </div>
+    </section>
+    
+    <section>
+        <h2>Directory</h2>
+        <p>
+            See all the organizations mapped. Click on icon for details.
+        </p>
+
+        <div class="map-container">
+            <iframe src="all_orgs.html"></iframe>
+        </div>
+    </section>
+
+    <section>
+        <h2>Analysis</h2>
+        <p>
+            Drag around the map to see areas with high counts of arts organizations. Each extrusion is color coded to show predominant discipline type.
+        </p>
+
+        <div class="map-container">
+            <iframe src="3d.html"></iframe>
+        </div>
+    </section>
+
+    <section class="insights">
+        <ul>
+            <li><strong>Manhattan Concentration:</strong> 45% of all cultural organizations are located in Manhattan</li>
+            <li><strong>Gallery Districts:</strong> Chelsea and Williamsburg show the highest density of visual arts organizations</li>
+            <li><strong>Theater Hub:</strong> Over 200 performance venues concentrate in Midtown and Lower Manhattan</li>
+            <li><strong>Access Gaps:</strong> Manhattan averages 12 organizations per neighborhood vs. 3-5 in outer boroughs</li>
+            <li><strong>Cultural Deserts:</strong> Several neighborhoods in outer Queens and Staten Island have zero organizations</li>
+        </ul>
+    </section>
+    
+      <section>
+        <p>
+            Manhattan alone brings up the average count.
+        </p>
+
+        <div class="map-container">
+            <iframe src="charts.html"></iframe>
+        </div>
+    </section>
+    
+
+    <section>
+        <p>
+            Hover over each neighborhood for organization count.
+        </p>
+
+        <div class="cluster-grid">
+            <div class="cluster-item">
+                <h3> Manhattan </h3>
+                <iframe src="mn.html"></iframe>
+            </div>
+
+            <div class="cluster-item">
+                <h3> Brooklyn </h3>
+                <iframe src="bk.html"></iframe>
+            </div>
+
+            <div class="cluster-item">
+                <h3> Bronx </h3>
+                <iframe src="bx.html"></iframe>
+            </div>
+
+            <div class="cluster-item">
+                <h3> Queens </h3>
+                <iframe src="qn.html"></iframe>
+            </div>
+
+            <div class="cluster-item">
+                <h3> Staten Island </h3>
+                <iframe src="si.html"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p><strong>NYC Cultural Organizations Atlas</strong></p>
+        <p>Data source: NYC Department of Cultural Affairs</p>
+        <p><a href="https://github.com/yourusername/nyc-arts-atlas">View on GitHub</a></p>
+    </footer>
+</body>
+</html>
